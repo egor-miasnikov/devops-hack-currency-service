@@ -9,7 +9,7 @@ steps:
       - 'CLOUDSDK_COMPUTE_REGION=europe-west4'
       - 'CLOUDSDK_CONTAINER_CLUSTER=hackaton2019-gke-cluster'
     id: deploy
-  #step 2
+  #step 3
   - name: gcr.io/hackaton2019-242912/jmeter:latest
     args:
     - '-n'
