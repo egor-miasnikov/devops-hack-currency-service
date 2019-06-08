@@ -8,5 +8,11 @@ steps:
     env:
       - 'CLOUDSDK_COMPUTE_REGION=europe-west4'
       - 'CLOUDSDK_CONTAINER_CLUSTER=hackaton2019-gke-cluster'
+  #step 2
+  - name: gcr.io/hackaton2019-242912/jmeter:latest
+    args:
+    - '-n'
+    - '-t'
+    - 'jmeter-config.jmx'
 images: ['gcr.io/hackaton2019-242912/currencyservice']
 tags: ['test_cloud_build']
