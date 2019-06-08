@@ -1,4 +1,10 @@
 steps:
+  - name: 'gcr.io/hackaton2019-242912/sonar-scanner:latest'
+    args:
+    - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
+    - '-Dsonar.login=5786c280e29e081c445cf943c61cb20eef616fc7'
+    - '-Dsonar.projectKey=currency_service_js'
+    - '-Dsonar.sources=src'
   #step 1
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/hackaton2019-242912/currencyservice', '.']
